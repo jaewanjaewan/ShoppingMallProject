@@ -17,7 +17,7 @@ public class Item {
 
     @Id
     @Column(name = "item_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO) //키 값을 생성하는 전략 명시
     private Long id; //상품 코드
 
     @Column(nullable = false, length = 50)
@@ -29,11 +29,11 @@ public class Item {
     @Column(nullable = false)
     private int stockNumber; //재고수량
 
-    @Lob
+    @Lob //BLOB(바이너리 데이터를 db외부에 저장하기 위한 타입), CLOB(사이즈가 큰 데이터를 외부 파일로 저장하기 위한 데이터 타입) 타입 매핑
     @Column(nullable = false)
     private String itemDetail; //상품 상세 설명
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING) //enum 타입 매핑
     private ItemSellStatus itemSellStatus; //상품 판매 상태
 
     private LocalDateTime regTime; //등록 시간
