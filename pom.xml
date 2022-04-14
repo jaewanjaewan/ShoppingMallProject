@@ -90,6 +90,10 @@
 			<scope>test</scope>
 			<version>${spring-security.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
+		</dependency>
 		<dependency> <!-- Spring Test Framework 라이브러리 -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
