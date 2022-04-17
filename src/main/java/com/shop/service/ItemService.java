@@ -1,6 +1,7 @@
 package com.shop.service;
 
 import com.shop.dto.ItemFormDto;
+import com.shop.dto.MainItemDto;
 import com.shop.entity.Item;
 import com.shop.entity.ItemImg;
 import com.shop.repository.ItemImgRepository;
@@ -15,7 +16,7 @@ import java.util.List;
 import com.shop.dto.ItemImgDto;
 import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
-
+import com.shop.dto.ItemSearchDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -30,6 +31,7 @@ public class ItemService {
 
     private final ItemImgRepository itemImgRepository;
 
+    //상품 저장
     public Long saveItem(ItemFormDto itemFormDto, List<MultipartFile> itemImgFileList) throws Exception{
 
         Item item = itemFormDto.createItem(); //상품 등록 폼으로부터 입력 받은 데이터를 이용하여 item 객체를 생성
@@ -85,4 +87,17 @@ public class ItemService {
 
         return item.getId();
     }
+
+    //관리자 페이지에 보여줄 상품 리스트를 조회하는 메소드
+    @Transactional(readOnly = true) //트랜잭션을 읽기 전용으로 설정 -> 성능을 향상 시킬 수 있음
+    public Page<Item> getAdminItemPage(ItemSearchDto itemSearchDto, Pageable pageable){
+        return itemRepository.getAdminItemPage(itemSearchDto, pageable);
+    }
+
+    //메인 페이지에 보여줄 상품 리스트를 조회하는 메소드
+    @Transactional(readOnly = true)
+    public Page<MainItemDto> getMainItemPage(ItemSearchDto itemSearchDto, Pageable pageable){
+        return itemRepository.getMainItemPage(itemSearchDto, pageable);
+    }
+
 }

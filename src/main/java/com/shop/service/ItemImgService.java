@@ -22,6 +22,7 @@ public class ItemImgService {
 
     private final FileService fileService;
 
+    //상품 이미지 저장 메소드
     public void saveItemImg(ItemImg itemImg, MultipartFile itemImgFile) throws Exception{
         String oriImgName = itemImgFile.getOriginalFilename(); //업로드 했던 상품 이미지 파일의 이름
         String imgName = "";

@@ -10,7 +10,7 @@ import java.util.List;
 
 /*JpaRepository는 2개의 제네릭 타입을 사용하는데 첫 번째에는 엔티티 타입 클래스를 넣고, 두 반째는 기본키
 타입을 넣어준다. JpaRepository는 기본적인 CRUD 및 페이징 처리를 위한 메소드가 정의돼 있다.*/
-public interface ItemRepository extends JpaRepository<Item, Long>, QuerydslPredicateExecutor<Item> {
+public interface ItemRepository extends JpaRepository<Item, Long>, QuerydslPredicateExecutor<Item>, ItemRepositoryCustom {
     //상품을 상품명으로 조회하는 쿼리 메소드
     List<Item> findByItemNm(String itemNm);
 
