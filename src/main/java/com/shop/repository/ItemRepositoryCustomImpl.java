@@ -68,7 +68,6 @@ public class ItemRepositoryCustomImpl implements ItemRepositoryCustom {
     //관리자 페이지에 보여줄 상품 리스트를 가져오는 메소드
     @Override
     public Page<Item> getAdminItemPage(ItemSearchDto itemSearchDto, Pageable pageable) {
-
         //queryFactory를 이용해서 쿼리를 생성. 쿼리문을 직접 작성할 때의 형태와 문법이 비슷한 것을 볼 수 있음
         QueryResults<Item> results = queryFactory
                 .selectFrom(QItem.item) //상품 데이터를 조회하기 위해 QItem의 item을 지정

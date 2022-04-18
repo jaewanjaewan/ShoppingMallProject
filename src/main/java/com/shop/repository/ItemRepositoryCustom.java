@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 public interface ItemRepositoryCustom {
     //관리자 페이지에 보여줄 상품 리스트를 가져오는 메소드
     Page<Item> getAdminItemPage(ItemSearchDto itemSearchDto, Pageable pageable);
+
     //메인 페이지에 보여줄 상품 리스트를 가져오는 메소드
     Page<MainItemDto> getMainItemPage(ItemSearchDto itemSearchDto, Pageable pageable);
 }
