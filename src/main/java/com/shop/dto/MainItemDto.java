@@ -8,13 +8,9 @@ import lombok.Setter;
 public class MainItemDto { //메인 페이지에서 상품을 보여줄 때 사용할 클래스
 
     private Long id;
-
     private String itemNm;
-
     private String itemDetail;
-
     private String imgUrl;
-
     private Integer price;
 
     @QueryProjection //상품 조회시 Item객체로 값을 받은 후 DTO로 변환하는 과정 없이 MainItemDto 객체로 바로 받아올 수 있다.

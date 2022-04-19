@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional //로직을 처리하다가 에러가 발생하면, 변경된 데이터를 로직을 수행하기 이전 상태로 콜백시켜줌
 @RequiredArgsConstructor //final이나 @NonNull이 붙은 필드에 생성자를 생성해줌
-public class MemberService implements UserDetailsService { //UserDetailsService인터페이스는 db에서 회원 정보를 가져오는 역할 담당
+public class MemberService implements UserDetailsService { //UserDetailsService 인터페이스는 db에서 회원 정보를 가져오는 역할 담당
 
     //빈을 주입하는 방법에는 @Autowired, 필드주입, 생성자주입이 있다.
     private final MemberRepository memberRepository;

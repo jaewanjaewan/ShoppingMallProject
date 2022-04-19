@@ -17,9 +17,7 @@ public class ItemImgService {
 
     @Value("${itemImgLocation}")
     private String itemImgLocation;
-
     private final ItemImgRepository itemImgRepository;
-
     private final FileService fileService;
 
     //상품 이미지 저장 메소드

@@ -7,13 +7,9 @@ import lombok.Setter;
 public class CartDetailDto { //장바구니 조회 페이지에 전달할 클래스
 
     private Long cartItemId; //장바구니 상품 아이디
-
     private String itemNm; //상품명
-
     private int price; //상품 금액
-
     private int count; //수량
-
     private String imgUrl; //상품 이미지 경로
 
     //장바구니 페이지에 전달할 데이터를 생성자의 파라미터로 만들어줌

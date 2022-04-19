@@ -19,6 +19,7 @@
                 calculateToalPrice();
             });
         });
+
         //현재 주문할 수량과 상품 한 개당 가격을 곱해서 결제 금액을 구해주는 함수
         function calculateToalPrice(){
             var count = $("#count").val();
@@ -68,6 +69,7 @@
                 }
             });
         }
+
         //장바구니 담기 로직을 호출하는 코드
         function addCart(){
             var token = $("meta[name='_csrf']").attr("content");

@@ -9,13 +9,9 @@ import org.modelmapper.ModelMapper;
 public class ItemImgDto { //상품 저장 후 상품 이미지에 대한 데이터를 전달할 클래스
 
     private Long id;
-
     private String imgName;
-
     private String oriImgName;
-
     private String imgUrl;
-
     private String repImgYn;
 
     //멤버 변수로 ModelMapper 객체를 추가

@@ -27,7 +27,6 @@ public class Member extends BaseEntity{ //회원 정보를 저장하는 엔티�
     private String email;
 
     private String password;
-
     private String address;
 
     @Enumerated(EnumType.STRING)

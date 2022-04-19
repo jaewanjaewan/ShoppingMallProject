@@ -18,6 +18,7 @@
                 getOrderTotalPrice();
             });
         });
+
         //총 주문 금액을 구하는 함수
         function getOrderTotalPrice(){
             var orderTotalPrice = 0;
@@ -30,6 +31,7 @@
 
             $("#orderTotalPrice").html(orderTotalPrice+'원');
         }
+
         //장바구니에 들어있는 상품의 수량을 변경 시 상품의 가격과 상품의 수량을 곱해서 상품 금액을 변경
         function changeCount(obj){
             var count = obj.value;
@@ -40,6 +42,7 @@
             getOrderTotalPrice();
             updateCartItemCount(cartItemId, count);
         }
+
         //장바구니에 들어있는 전체 상품을 체크하거나 체크 해제하는 함수
         function checkAll(){
             if($("#checkall").prop("checked")){
@@ -49,6 +52,7 @@
             }
             getOrderTotalPrice();
         }
+
         //장바구니 상품의 수량을 수정할 경우 업데이트 요청
         function updateCartItemCount(cartItemId, count){
             var token = $("meta[name='_csrf']").attr("content");
@@ -80,6 +84,7 @@
                 }
             });
         }
+
         //X버튼을 클릭하면 해당 상품을 삭제하는 로직
         function deleteCartItem(obj){
             var cartItemId = obj.dataset.id;
@@ -113,6 +118,7 @@
             });
         }
 
+        //장바구니에서 선택한 상품을 주문 요청 하기 위한 함수
         function orders(){
             var token = $("meta[name='_csrf']").attr("content");
             var header = $("meta[name='_csrf_header']").attr("content");
@@ -122,6 +128,7 @@
             var dataList = new Array();
             var paramData = new Object();
 
+            //체크된 장바구니 상품 아이디를 전달하기 위해서 dataList 배열에 장바구니 상품 아이디를 객체로 만들어서 저장
             $("input[name=cartChkBox]:checked").each(function() {
                 var cartItemId = $(this).val();
                 var data = new Object();
@@ -129,6 +136,7 @@
                 dataList.push(data);
             });
 
+            //장바구니 상품 아이디를 저장하고 있는 dataList 배열을 paramData 객체에 추가
             paramData['cartOrderDtoList'] = dataList;
 
             var param = JSON.stringify(paramData);
@@ -146,7 +154,7 @@
                 cache   : false,
                 success  : function(result, status){
                     alert("주문이 완료 되었습니다.");
-                    location.href='/orders';
+                    location.href='/orders'; //주문 요청 결과 성공하였다면 구매 이력 페이지로 이동
                 },
                 error : function(jqXHR, status, error){
 

@@ -16,11 +16,8 @@ public class OrderItemDto { //주문 이력 조회를 위해 주문 상품 정�
     }
 
     private String itemNm; //상품명
-
     private int count; //주문 수량
-
     private int orderPrice; //주문 금액
-
     private String imgUrl; //상품 이미지 경로
 
 }

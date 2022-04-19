@@ -26,9 +26,7 @@ import org.springframework.data.domain.Pageable;
 public class ItemService {
 
     private final ItemRepository itemRepository;
-
     private final ItemImgService itemImgService;
-
     private final ItemImgRepository itemImgRepository;
 
     //상품 저장

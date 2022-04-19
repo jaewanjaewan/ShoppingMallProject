@@ -21,4 +21,5 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
             response.sendRedirect("/members/login"); //나머지 경우는 로그인 페이지로 리다이렉트
         }
     }
+
 }
