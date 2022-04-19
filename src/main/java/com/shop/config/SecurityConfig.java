@@ -15,7 +15,8 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity //이 어노테이션을 선언하면 SpringSecurityFilterChain이 자동으로 포함됨
-public class SecurityConfig extends WebSecurityConfigurerAdapter { //상속 받아서 메소드 오버라이딩을 통해 보안 설정을 커스터마이징 할 수 있음
+//스프링 시큐리티 설정(상속 받아서 메소드 오버라이딩을 통해 보안 설정을 커스터마이징 할 수 있음)
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     MemberService memberService;
@@ -60,4 +61,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter { //상속 받�
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers("/css/**", "/js/**", "/img/**");
     }
+
 }

@@ -18,7 +18,7 @@ import javax.persistence.EntityManager;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class ItemRepositoryCustomImpl implements ItemRepositoryCustom {
+public class ItemRepositoryCustomImpl implements ItemRepositoryCustom { //사용자 정의 인터페이스 구현
 
     private JPAQueryFactory queryFactory; //동적으로 쿼리를 생성하기위해 JPAQueryFactory 사용
 
@@ -119,4 +119,5 @@ public class ItemRepositoryCustomImpl implements ItemRepositoryCustom {
         long total = results.getTotal();
         return new PageImpl<>(content, pageable, total);
     }
+
 }

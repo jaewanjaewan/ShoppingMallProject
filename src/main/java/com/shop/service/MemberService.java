@@ -47,4 +47,5 @@ public class MemberService implements UserDetailsService { //UserDetailsServiceì
                 .roles(member.getRole().toString())
                 .build();
     }
+
 }

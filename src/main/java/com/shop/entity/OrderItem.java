@@ -7,7 +7,8 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter @Setter
-public class OrderItem extends BaseEntity{
+public class OrderItem extends BaseEntity{ //주문한 상품의 정보를 저장하는 엔티티
+
     @Id @GeneratedValue
     @Column(name = "order_item_id")
     private Long id;

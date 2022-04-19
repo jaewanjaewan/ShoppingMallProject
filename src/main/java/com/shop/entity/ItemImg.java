@@ -8,7 +8,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "item_img")
 @Getter @Setter
-public class ItemImg extends BaseEntity {
+public class ItemImg extends BaseEntity { //상품의 이미지를 저장하는 상품 이미지 엔티티
+
     @Id
     @Column(name="item_img_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,4 +34,5 @@ public class ItemImg extends BaseEntity {
         this.imgName = imgName;
         this.imgUrl = imgUrl;
     }
+
 }

@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-public class MainItemDto {
+public class MainItemDto { //메인 페이지에서 상품을 보여줄 때 사용할 클래스
 
     private Long id;
 
@@ -25,4 +25,5 @@ public class MainItemDto {
         this.imgUrl = imgUrl;
         this.price = price;
     }
+
 }

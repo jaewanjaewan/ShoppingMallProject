@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-public class Item extends BaseEntity{
+public class Item extends BaseEntity{ //상품 정보를 저장하는 엔티티
 
     @Id
     @Column(name = "item_id")
@@ -59,4 +59,5 @@ public class Item extends BaseEntity{
     public void addStock(int stockNumber){
         this.stockNumber += stockNumber;
     }
+
 }

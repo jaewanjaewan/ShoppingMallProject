@@ -31,4 +31,5 @@ public class OrderHistDto { //주문 이력 조회를 위해 주문 정보를 �
     public void addOrderItemDto(OrderItemDto orderItemDto){
         orderItemDtoList.add(orderItemDto);
     }
+
 }

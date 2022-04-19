@@ -8,7 +8,8 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface OrderRepository extends JpaRepository<Order, Long> {
+public interface OrderRepository extends JpaRepository<Order, Long> { //주문 엔티티를 저장하기 위한 인터페이스
+
     @Query("select o from Order o " +
             "where o.member.email = :email " +
             "order by o.orderDate desc"

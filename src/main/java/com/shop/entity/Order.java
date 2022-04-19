@@ -12,7 +12,8 @@ import java.util.List;
 @Entity
 @Table(name = "orders")
 @Getter @Setter
-public class Order extends BaseEntity{
+public class Order extends BaseEntity{ //주문 정보를 저장하는 엔티티
+
     @Id @GeneratedValue
     @Column(name = "order_id")
     private Long id;

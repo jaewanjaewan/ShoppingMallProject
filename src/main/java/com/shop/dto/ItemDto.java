@@ -7,7 +7,8 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-public class ItemDto {
+public class ItemDto { //상품의 정보를 전달할 클래스
+
     private Long id;
     private String itemNm;
     private Integer price;
@@ -15,4 +16,5 @@ public class ItemDto {
     private String sellStatCd;
     private LocalDateTime regTime;
     private LocalDateTime updateTime;
+
 }

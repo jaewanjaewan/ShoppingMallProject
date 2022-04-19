@@ -6,7 +6,7 @@ import lombok.Setter;
 import org.modelmapper.ModelMapper;
 
 @Getter @Setter
-public class ItemImgDto {
+public class ItemImgDto { //상품 저장 후 상품 이미지에 대한 데이터를 전달할 클래스
 
     private Long id;
 
@@ -25,4 +25,5 @@ public class ItemImgDto {
     public static ItemImgDto of(ItemImg itemImg){
         return modelMapper.map(itemImg, ItemImgDto.class);
     }
+
 }

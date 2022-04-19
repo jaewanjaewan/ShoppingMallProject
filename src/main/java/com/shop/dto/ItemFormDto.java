@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter @Setter
-public class ItemFormDto {
+public class ItemFormDto { //상품 데이터 정보를 전달하는 클래스
 
     private Long id;
 
@@ -48,4 +48,5 @@ public class ItemFormDto {
     public static ItemFormDto of(Item item){
         return modelMapper.map(item, ItemFormDto.class);
     }
+
 }

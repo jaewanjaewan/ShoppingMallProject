@@ -14,7 +14,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "member")
 @ToString
-public class Member extends BaseEntity{
+public class Member extends BaseEntity{ //회원 정보를 저장하는 엔티티
+
     @Id
     @Column(name = "member_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -43,4 +44,5 @@ public class Member extends BaseEntity{
         member.setRole(Role.USER);
         return member;
     }
+
 }

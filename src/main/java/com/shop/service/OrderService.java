@@ -25,6 +25,7 @@ import org.thymeleaf.util.StringUtils;
 @Transactional
 @RequiredArgsConstructor
 public class OrderService {
+
     private final ItemRepository itemRepository;
 
     private final MemberRepository memberRepository;
@@ -98,4 +99,5 @@ public class OrderService {
                 .orElseThrow(EntityNotFoundException::new);
         order.cancelOrder();  //주문 취소 상태로 변경하면 변경 감지 기능에 의해서 트랜잭션이 끝날 때 update 쿼리가 실행됨
     }
+
 }

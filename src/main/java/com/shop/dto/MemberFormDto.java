@@ -10,7 +10,8 @@ import javax.validation.constraints.NotEmpty;
 
 @Getter
 @Setter
-public class MemberFormDto {
+public class MemberFormDto { //회원 가입 화면으로부터 넘어오는 가입정보를 담는 클래스
+
     @NotBlank(message = "이름은 필수 입력 값입니다.")
     private String name;
 
@@ -24,4 +25,5 @@ public class MemberFormDto {
 
     @NotEmpty(message = "주소는 필수 입력 값입니다.")
     private String address;
+
 }

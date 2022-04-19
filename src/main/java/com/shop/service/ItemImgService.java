@@ -61,4 +61,5 @@ public class ItemImgService {
             savedItemImg.updateItemImg(oriImgName, imgName, imgUrl); //변경된 상품 이미지 정보를 세팅
         }
     }
+
 }
