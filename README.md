@@ -9,3 +9,15 @@
 * 데이터베이스 : MariaDB
 * 빌드 툴 : 메이븐
 * 테스트 프레임워크 : JUnit
+
+## 사용 언어 & 기술
+* HTML5
+* CSS3
+* JavaScript ES 6
+* Jquery
+* BootStrap
+* JAVA11
+* JPA
+* SpringBoot(MVC2 패턴)
+* ThymeLeaf
+* Json
